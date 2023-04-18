@@ -9,7 +9,7 @@ RUN apk add --no-cache \
     python3 \
     py3-pip \
     git
-RUN git clone -b ikifar https://github.com/ikifar2012/amcrest2mqtt.git
+RUN git clone -b main https://github.com/layertwo/amcrest2mqtt.git
 # Copy data for add-on
 RUN pip install -r /amcrest2mqtt/requirements.txt
 COPY rootfs /
@@ -31,7 +31,7 @@ LABEL \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="amcrest2mqtt" \
     org.label-schema.schema-version="1.0" \
-    org.label-schema.usage="https://github.com/ikifar2012/amcrest2mqtt-addon/blob/main/README.md" \
+    org.label-schema.usage="https://github.com/snozzley/amcrest2mqtt-addon/blob/main/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/ikifar2012/amcrest2mqtt-addon/" \
+    org.label-schema.vcs-url="https://github.com/snozzley/amcrest2mqtt-addon/" \
     org.label-schema.vendor="Matheson's Home Assistant Addons"
